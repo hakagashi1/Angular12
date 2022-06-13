@@ -6,4 +6,26 @@
     <ul *ngFor="let t of traiCay; let i = index">
         <li>{{ i + 1 }}. {{ t }}</li>
     </ul>
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Đại hạ giá</th>
+        </tr>
+        <tr *ngFor="let t of traiCay2; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ t.ten }}</td>
+            <td class="right">
+                <span [ngClass]="{ 'so-am' : t.gia < 0 }">{{ t.gia }}</span>
+            </td>
+            <td>
+                <span *ngIf="t.haGia">Đang hạ giá !</span>
+            </td>
+        </tr>
+
+    </table>
+
 </div>

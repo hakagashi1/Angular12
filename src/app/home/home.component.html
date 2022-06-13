@@ -1,4 +1,16 @@
 <div class="test">
     <h3>Đây là Component Home</h3>
     <h2>Chào bạn {{ name }}</h2>
+
+    <label for="inp">Input: </label>
+    <input id="inp" value="{{ name }}" />
+    <br />
+
+    <label for="out1">Out1: </label>
+    <input id="out1" [value]="name" title="Đây là {{ name }}" />
+    <br />
+
+    <label for="out2">Out2: </label>
+    <input id="out2" [value]="name" [title]="'Đây là ' + name" />
+    <br />
 </div>

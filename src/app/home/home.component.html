@@ -2,19 +2,8 @@
     <h3>Đây là Component Home</h3>
     <br />
 
-    <label for="txt">Age: </label>
-    <input id="txt" type="number" [(ngModel)]="age" />
-
-    <h2>Tuổi bạn là {{ age }}</h2>
-    <!-- <h2 *ngIf="age <= 18">Bạn còn trẻ quá !</h2>
-    <h2 *ngIf="age > 18">Bạn đã già rồi !</h2> -->
-
-    <div *ngIf="age <= 18; then tre else gia"></div>
-
-    <ng-template #tre>
-        <h2>Bạn còn trẻ quá !</h2>
-    </ng-template>
-    <ng-template #gia>
-        <h2>Bạn đã già rồi !</h2>
-    </ng-template>
+    <h1>Trái cây</h1>
+    <ul *ngFor="let t of traiCay; let i = index">
+        <li>{{ i + 1 }}. {{ t }}</li>
+    </ul>
 </div>

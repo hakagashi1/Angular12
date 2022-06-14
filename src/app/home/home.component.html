@@ -1,4 +1,53 @@
 <div class="test">
     <h3>Đây là Component Home</h3>
-    <p>Thêm hàng thứ 2 trong Home</p>
+    <br />
+
+    <!-- <h1>Trái cây</h1>
+    <ul *ngFor="let t of traiCay; let i = index">
+        <li>{{ i + 1 }}. {{ t }}</li>
+    </ul>
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Đại hạ giá</th>
+        </tr>
+        <tr *ngFor="let t of traiCay2; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ t.ten | uppercase }}</td>
+            <td class="right">
+                <span [ngClass]="{ 'so-am' : t.gia < 0 }">{{
+                  t.gia | currency:'USD':'symbol':'4.2-2'
+                }}</span>
+            </td>
+            <td>
+                <span>{{ t.haGia | onSale | uppercase }}</span>
+            </td>
+        </tr>
+
+    </table> -->
+
+    <label for="city">Tỉnh / Thành Phố: </label>
+    <select id="city" name="city" (change)="changeCity($event)">
+      <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+        {{ data.city }}
+      </option>
+    </select>
+    <br />
+
+    <label for="district">Quận / Huyện: </label>
+    <select id="district" name="district">
+      <option *ngFor="let district of districts" value="{{ district }}">{{ district }}</option>
+    </select>
+    <br />
+
+
+    <span>Counter = {{ counter }}</span>
+    <br />
+
+    <span>Counter ^ 2 = {{ counterBinhPhuong }}</span>
+
 </div>
